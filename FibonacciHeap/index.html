@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="usage.js"></script>
+</head>
+
+<body onload="init()">
+    <input type="button" value="Extract All Nodes With Default Compare" onclick="Extract_WithDefaultCompare()">
+    <input type="button" value="Extract All Nodes With Custom Compare" onclick="Extract_WithCustomCompare()">
+    <hr>
+
+    <table id="tblResult">
+        <thead>
+            <tr style="background-color: darkgray;">
+                <td>INPUT</td>
+                <td>RESULT</td>
+            </tr>
+        </thead>
+        <tbody style="background-color: yellowgreen;">
+            <tr>
+                <td>
+                    <p id="input"></p>
+                </td>
+                <td>
+                    <p id="result"></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
