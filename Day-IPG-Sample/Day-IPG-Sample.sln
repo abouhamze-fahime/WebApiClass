@@ -26,6 +26,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "dayIPGFront", "..\dayIPGFro
 		SlnRelativePath = "..\dayIPGFront\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day-IPG-Sample.Test", "..\Day-IPG-Sample.Test\Day-IPG-Sample.Test.csproj", "{D7E80E4B-37AF-4137-BFD2-0532C8896CF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{3D4EEF62-95DF-43F0-8044-8DA5C8156513}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D4EEF62-95DF-43F0-8044-8DA5C8156513}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D4EEF62-95DF-43F0-8044-8DA5C8156513}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D7E80E4B-37AF-4137-BFD2-0532C8896CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7E80E4B-37AF-4137-BFD2-0532C8896CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7E80E4B-37AF-4137-BFD2-0532C8896CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7E80E4B-37AF-4137-BFD2-0532C8896CF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

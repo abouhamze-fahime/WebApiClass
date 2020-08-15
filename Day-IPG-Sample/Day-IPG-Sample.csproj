@@ -115,6 +115,7 @@
   <ItemGroup>
     <Compile Include="App_Start\DayAuthorization.cs" />
     <Compile Include="App_Start\DayClaimAttribute.cs" />
+    <Compile Include="App_Start\Hash.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\TokenManager.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />

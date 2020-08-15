@@ -13,9 +13,8 @@ function login(username, password){
                 alert(res.statusText);
             }
             else{
-                debugger;
-                alert('Welcome '+username);
+                window.location="home.html";
             }
         })
-        .catch(error => console.error('Unable to add item.', error));
+        .catch(error => console.error('Unable to login.', error));
 }

@@ -1,19 +1,32 @@
 <html>
-    <head>
-        <script type="text/javascript" src="login.js"></script>
-    </head>
-    <body>
 
+<head>
+    <script type="text/javascript" src="login.js"></script>
+</head>
 
-<div>
-Username:<input type="text" id="username"/>
-<br/>
-Password: <input type="password" id="password"/>
+<body style="direction: rtl;font-family: tahoma;font-size: 12px;">
 
-<br/>
-<input type="button" value="ورود" onclick="login(document.getElementById('username').value, document.getElementById('password').value)"/>
+    <div>
 
-</div>
+        <table style="background-color: cyan; padding:20px">
+            <tr>
+                <td>نام کاربری:</td>
+                <td><input type="text" id="username" /></td>
+            </tr>
+            <tr>
+                <td>رمزعبور</td>
+                <td><input type="password" id="password" /></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="2">
+                    <input type="button" value="ورود"
+                        onclick="login(document.getElementById('username').value, document.getElementById('password').value)" />
+                </td>
+            </tr>
+        </table>
 
-    </body>
+    </div>
+
+</body>
+
 </html>

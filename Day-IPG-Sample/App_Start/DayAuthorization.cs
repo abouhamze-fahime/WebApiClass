@@ -25,14 +25,14 @@ namespace Day_IPG_Sample.App_Start
 
                     string claim = actionContext.ActionDescriptor.GetCustomAttributes<DayClaimAttribute>().FirstOrDefault()?.Title;
 
-                    if (
-                        claim == null ||
-                        HasAccess(HttpContext.Current.User.Identity.Name, claim))
+                   // if (
+                     //   claim == null )
+                        //HasAccess(HttpContext.Current.User.Identity.Name, claim))
                         base.OnAuthorization(actionContext);
-                    else
-                    {
-                        throw new Exception("You do not have access");
-                    }
+                    //else
+                    //{
+                    //    throw new Exception("You do not have access");
+                    //}
                 }
                 else
                 {
@@ -41,9 +41,9 @@ namespace Day_IPG_Sample.App_Start
             }
         }
 
-        private bool HasAccess(string username, string claim)
-        {
-            return false;
-        }
+        //private bool HasAccess(string username, string claim)
+        //{
+        //    return false;
+        //}
     }
 }
