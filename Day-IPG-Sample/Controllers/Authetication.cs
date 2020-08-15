@@ -14,6 +14,7 @@ namespace Day_IPG_Sample.Controllers
         [AllowAnonymous]
         public IHttpActionResult Login(LoginViewModel vm)
         {
+            //ADO.NET  ===> EF
             if (ModelState.IsValid == false || string.IsNullOrEmpty(vm.UserName.Trim()) || string.IsNullOrEmpty(vm.Password.Trim()))
             {
                 return BadRequest("username or password is null or empty");
