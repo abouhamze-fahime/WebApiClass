@@ -10,18 +10,22 @@
 
         <table style="background-color: cyan; padding:20px">
             <tr>
-                <td>نام کاربری:</td>
+                <td>شماره موبایل:</td>
                 <td><input type="text" id="username" /></td>
             </tr>
             <tr>
-                <td>رمزعبور</td>
+                <td>کدملی</td>
                 <td><input type="password" id="password" /></td>
             </tr>
             <tr style="text-align: center;">
                 <td colspan="2">
-                    <input type="button" value="ورود"
+                    <input type="button" value="احرازهویت"
                         onclick="login(document.getElementById('username').value, document.getElementById('password').value)" />
                 </td>
+            </tr>
+			            <tr style="display:none">
+                <td>رمز یکبارمصرف</td>
+                <td><input type="number" id="otp" /></td>
             </tr>
         </table>
 

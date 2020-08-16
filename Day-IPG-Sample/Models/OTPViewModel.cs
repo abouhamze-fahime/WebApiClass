@@ -1,8 +1,8 @@
 ﻿namespace Day_IPG_Sample.Models
 {
-    public class LoginViewModel
+    public class OTPViewModel
     {
         public string NationalCode{ get; set; }
-        public string MobileNumber { get; set; }
+        public int Code { get; set; }
     }
 }
