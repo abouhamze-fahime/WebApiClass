@@ -9,6 +9,8 @@ namespace Day_IPG_Sample.DayContext.MappingConfigurations
         {
             ToTable("Vie_Users", "Account");
 
+            HasKey(x => x.NationalCode);
+
             Property(x => x.NationalCode).IsRequired().IsUnicode(false).HasMaxLength(10);
 
             Property(x => x.MobileNumber).IsRequired().IsUnicode(false).HasMaxLength(11);

@@ -10,40 +10,35 @@ namespace Day_IPG_Sample.App_Start
     {
         public override void OnAuthorization(HttpActionContext actionContext)
         {
-            var token = actionContext.Request.Headers.FirstOrDefault(x => x.Key == "Token").Value?.FirstOrDefault();
+            var token = actionContext.Request.Headers.FirstOrDefault(x => x.Key == "Authentication").Value?.FirstOrDefault();
 
             if (token == null)
             {
                 throw new Exception("Unauthorized request");
             }
+
+            var principal = TokenManager.GetPrincipal(token);
+            if (principal != null)
+            {
+                HttpContext.Current.User = principal;
+
+                using (var ctx = new DayContext.DayContext())
+                {
+                    if (!ctx.ActiveSessions.Any(x =>
+                        x.NationalCode == HttpContext.Current.User.Identity.Name &&
+                        x.IP == HttpContext.Current.Request.UserHostAddress &&
+                        x.Token == token))
+                    {
+                        throw new Exception("Invalid token");
+                    }
+                }
+
+                base.OnAuthorization(actionContext);
+            }
             else
             {
-                var principal = TokenManager.GetPrincipal(token);
-                if (principal != null)
-                {
-                    HttpContext.Current.User = principal;
-
-                    string claim = actionContext.ActionDescriptor.GetCustomAttributes<DayClaimAttribute>().FirstOrDefault()?.Title;
-
-                   // if (
-                     //   claim == null )
-                        //HasAccess(HttpContext.Current.User.Identity.Name, claim))
-                        base.OnAuthorization(actionContext);
-                    //else
-                    //{
-                    //    throw new Exception("You do not have access");
-                    //}
-                }
-                else
-                {
-                    throw new Exception("Invalid token");
-                }
+                throw new Exception("Invalid token");
             }
         }
-
-        //private bool HasAccess(string username, string claim)
-        //{
-        //    return false;
-        //}
     }
 }

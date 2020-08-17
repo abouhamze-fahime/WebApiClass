@@ -128,15 +128,24 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\TokenManager.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\Authetication.cs" />
+    <Compile Include="Controllers\AutheticationController.cs" />
+    <Compile Include="Controllers\InstalmentController.cs" />
     <Compile Include="DayContext\DayContext.cs" />
+    <Compile Include="DayContext\MappingConfigurations\ActiveSessionsMappingConfiguration.cs" />
+    <Compile Include="DayContext\MappingConfigurations\InstalmentPaymentLogsMappingConfiguration.cs" />
     <Compile Include="DayContext\MappingConfigurations\OTPRequestsMappingConfiguration .cs" />
+    <Compile Include="DayContext\MappingConfigurations\InstalmentsMappingConfiguration.cs" />
     <Compile Include="DayContext\MappingConfigurations\UsersMappingConfiguration.cs" />
+    <Compile Include="DayContext\Models\Account\ActiveSessions.cs" />
     <Compile Include="DayContext\Models\Account\OTPRequests.cs" />
     <Compile Include="DayContext\Models\Account\Users.cs" />
+    <Compile Include="DayContext\Models\Instalment\InstalmentPaymentLogs.cs" />
+    <Compile Include="DayContext\Models\Instalment\Instalments.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\InstalmentpaymentLogViewModel.cs" />
+    <Compile Include="Models\InstalmentViewModel.cs" />
     <Compile Include="Models\OTPViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,6 +162,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
