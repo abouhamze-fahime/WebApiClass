@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>کدملی</td>
+    <td><input type="text" id="nationalNumber" [(ngModel)]="getCodeModel.nationalCode" /></td>
+  </tr>
+  <tr>
+    <td>شماره موبایل:</td>
+    <td><input type="text" id="mobileNumber" [(ngModel)]="getCodeModel.mobileNumber" /></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <input id="btnGetCode" type="button" value="دریافت کد" (click)="getCode()" />
+    </td>
+</table>

@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <td>شماره بیمه نامه</td>
+      <td>تاریخ سررسید</td>
+      <td>مبلغ</td>
+      <td>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of instalments">
+      <td>{{i.insuranceNumber}}</td>
+      <td>{{i.dueDate}}</td>
+      <td>{{i.price}}</td>
+      <td><input type="button" value="پرداخت" (click)="pay(i.id)"></td>
+    </tr>
+  </tbody>
+</table>
